@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
+import { PRODUCTS } from "../../products";
+import { Product } from "./product";
+import "./shop.css";
 
-const Shop = () => {
+export const Shop = () => {
   return (
-    <div>
-        <div className="shop">
-            <div className="shopTitle">
-                <h1>ErayReact Shop</h1>
-            </div>
-        </div>
-        <div className="products">
-            
-        </div>
-    </div>
-  )
-}
+    <div className="shop">
+      <div className="shopTitle">
+        <h1>PedroTech Shop</h1>
+      </div>
 
-export default Shop
+      <div className="products">
+        {PRODUCTS.map((product) => (
+          <Product data={product} />
+        ))}
+      </div>
+    </div>
+  );
+};
